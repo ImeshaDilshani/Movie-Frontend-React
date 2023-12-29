@@ -1,10 +1,9 @@
 import React from 'react'
+import Hero from '../hero/Hero';
 
-function Home() {
+function Home({movies}) {
   return (
-    <div>
-      Welcome!!!
-    </div>
+    <Hero movies={movies}/>
   )
 }
 

@@ -1,9 +1,34 @@
 import React from 'react'
-import '/.Hero.css'
+import Carousel from 'react-material-ui-carousel'
+import { Paper } from '@mui/material'
+import './Hero.css'
 
-function Hero() {
+function Hero({movies}) {
   return (
-    <div>Hero</div>
+    <div className='movie-carousel-container'>
+      <Carousel>
+        {
+          movies.map((movies) =>{
+            return(
+              <Paper>
+                <div movie-card-container>
+                  <div movie-card>
+                    <div className='movie-detail'>
+                      <div className='movie-poster'>
+                        <img src={movies.poster} alt=""/>
+                      </div>
+                      <div className='movie-title'>
+                        <h4>{movies.title}</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Paper>
+            )
+          })
+        }
+      </Carousel>
+    </div>
   )
 }
 
