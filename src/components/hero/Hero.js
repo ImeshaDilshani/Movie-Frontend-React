@@ -11,8 +11,8 @@ function Hero({movies}) {
           movies.map((movies) =>{
             return(
               <Paper>
-                <div movie-card-container>
-                  <div movie-card>
+                <div className = 'movie-card-container'>
+                  <div className="movie-card" style={{"--img": `url(${movies.backdrops[0]})`}}>
                     <div className='movie-detail'>
                       <div className='movie-poster'>
                         <img src={movies.poster} alt=""/>
