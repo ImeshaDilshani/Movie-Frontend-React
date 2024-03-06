@@ -7,6 +7,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './components/home/Home';
 import Header from './components/header/header';
 import trailer from './components/trailer/trailer';
+import Reviews from './components/reviews/Reviews';
 
 
 
@@ -59,7 +60,7 @@ function App() {
         <Route path="/" element={<Layout/>}>
           <Route path="/" element={<Home movies={movies}/>}></Route>
           <Route path="/trailer/:ytTrailerId" element={<trailer/>}></Route>
-          <Route path="/reviews/:movieId" element ={<reviews getMovieData = {getMovieData} movie={movie} reviews ={reviews} setReviews = {setReviews} />}></Route>
+          <Route path="/Reviews/:movieId" element ={<Reviews getMovieData = {getMovieData} movie={movie} reviews ={reviews} setReviews = {setReviews} />}></Route>
         </Route>
       </Routes>
     </div>
